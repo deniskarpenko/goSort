@@ -24,3 +24,18 @@ func (sort *Sort) SortSelect() bool {
 	fmt.Printf("%#v\n", sort)
 	return true
 }
+
+func (sort *Sort) SortBuble() bool {
+	fmt.Printf("%#v\n", sort)
+	for i := 0; i < len(sort.arr); i++ {
+		for j := len(sort.arr) -1; j > i; j-- {
+			if sort.arr[j-1] > sort.arr[j] {
+				tmp := sort.arr[j-1]
+				sort.arr[j-1] =  sort.arr[j]
+				sort.arr[j] = tmp
+			}
+		}
+	}
+	fmt.Printf("%#v\n", sort)
+	return true
+}
