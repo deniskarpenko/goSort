@@ -6,13 +6,21 @@ type Sort struct {
 	arr []int
 }
 
-func NewArr(mass []int) *Sort {
+func NewSort(mass []int) *Sort {
 	return &Sort{mass}
 }
 
-func sortSelect(mas []int) []int {
-	for i := 0; i < len(mas); i++ {
-		fmt.Println(i * i)
+func (sort *Sort) SortSelect() bool {
+	fmt.Printf("%#v\n", sort)
+	for i := 0; i < len(sort.arr); i++ {
+		for j := 0; j < len(sort.arr); j++ {
+			if sort.arr[j] > sort.arr[i] {
+				tmp := sort.arr[j]
+				sort.arr[j] = sort.arr[i]
+				sort.arr[i] = tmp
+			}
+		}
 	}
-	return mas
+	fmt.Printf("%#v\n", sort)
+	return true
 }
