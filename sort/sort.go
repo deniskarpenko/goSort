@@ -39,3 +39,17 @@ func (sort *Sort) SortBuble() bool {
 	fmt.Printf("%#v\n", sort)
 	return true
 }
+
+func (sort *Sort)  SortInsert() bool {
+	fmt.Printf("%#v\n", sort)
+	for i := 1; i < len(sort.arr); i++ {
+		x := sort.arr[i]
+		j := i
+		for ; j >= 1 && sort.arr[j-1] > x; j-- {
+			sort.arr[j] = sort.arr[j-1]
+		}
+		sort.arr[j] = x
+	}
+	fmt.Printf("%#v\n", sort)
+	return true
+}
