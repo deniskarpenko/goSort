@@ -53,3 +53,10 @@ func (sort *Sort)  SortInsert() bool {
 	fmt.Printf("%#v\n", sort)
 	return true
 }
+
+func (sort *Sort) SortShell() bool {
+	fmt.Printf("%#v\n", sort)
+
+	fmt.Printf("%#v\n", sort)
+	return true
+}
