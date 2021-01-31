@@ -7,10 +7,16 @@ import (
 
 func main()  {
 	social := socials.NewFacebook();
-	social.SetToken("EAAXNr3F3gqYBAKJ0w27NKJJZAVxUXKZBTztpxTExQRLXno9088BifiBYe7OjJnWuiZAToFjosZBXZAZCfnbjl9WDAN5XENqneUUx8AiqAaFzIKyGeetZAC8ZAAMkH2SGWVl9epZCa6BWhrE7kEVQWZAUyyozEQl1WfGl7egL7wZCrJup1wl5vA3MC64lhxMzRyjZBkgU09gzGhpM0wZDZD");
+	social.SetToken("EAAXNr3F3gqYBAGplA5DQpiKdGgsietyMPVJnKZBBAT8TlZASZCbpIkMZBGOWDoftzjk1QS350X6dcdmxQzsd0DY2ubkgFzsaxodxfF9BreAZCI9lvJtMkoBlWcSdZCj1KB1mlFUXZCh2sIM6lqY6P071FHS4w9VZAbOBxZCAZC0je5bp4gYJkStfyHLv9rxcYV18uvA1I2h9dgBHkZBZC7OG9oUwfifrO1tzLMhSSyR55JZCObW9d3NlpZBPk3qsM2ChEZBTJ4ZD");
 	meInfo,status := social.GetMe()
 	if status {
 		println(meInfo)
+	} else {
+		println(social.GetToken())
+	}
+	followers,status := social.GetFollowers("sargonApp")
+	if status {
+		println(followers)
 	} else {
 		println(social.GetToken())
 	}
