@@ -80,3 +80,4 @@ func (f *Facebook) GetFollowers(idPage string) (string, bool) {
 func NewFacebook() *Facebook {
 	return &Facebook{}
 }
+
