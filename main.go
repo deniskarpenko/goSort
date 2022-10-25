@@ -6,10 +6,9 @@ import (
 )
 
 func main()  {
-	idFacebookApp := "1633528290181798"
-	secretFacebookApp := "6e09c6911662367916a88d58dff59bcb"
+	idFacebookApp := "___"
+	secretFacebookApp := "___"
 	facebookAppToken := idFacebookApp + "|" + secretFacebookApp
-	//facebookAppToken := "EAAXNr3F3gqYBAM5XnucaDc6WKZAgAM2ZBtJlx7d1bIZCfVhd93SJWWZAZBynYypz8HxHovryBFseZCk7StPg8iFn1ZAqsCDLi18dkjRDMb9T1INWvaPCsiKlNSZCLrC7niOqzeCKxlFdwUpCpOEUQxHDzeQRkbOkehW8mkZCEpbrSdoQeXDFlIrjQt1Ys7by0T7bnIq4iiwb29BxZCimHKVShf"
 	social := socials.FactorySocial("fb");
 	social.SetToken(facebookAppToken)
 	//followers,status := social.GetMe()
